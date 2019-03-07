@@ -35,7 +35,3 @@ The following libraries are being used:
 * [What Input?](https://github.com/ten1seven/what-input) - tracks the current input method (mouse, keyboard or touch)
 * [ViewerJS](https://viewerjs.org/) - PDF viewer
 
-
-### Compiled pages
-
-http://45.55.190.41/tenants/
