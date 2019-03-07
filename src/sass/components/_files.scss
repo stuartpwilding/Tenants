@@ -1,0 +1,25 @@
+.files {
+    border-top: 1px solid $color-gray;
+
+    li {
+        border-bottom: 1px solid $color-gray;
+    }
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .name {
+        @include ellipsis;
+        color: $color-blue;
+    }
+
+    .date {
+        color: $color-text;
+        white-space: nowrap;
+        margin-left: 0.5em;
+    }
+}

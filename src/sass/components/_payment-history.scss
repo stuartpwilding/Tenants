@@ -1,0 +1,46 @@
+.payment-history {
+    border-top: 1px solid $color-gray;
+}
+
+.payment-detail {
+    border-bottom: 1px solid $color-gray;
+    padding: 18px 0 15px;
+
+    .amount-date,
+    .card-transaction {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(13);
+    }
+
+    .amount {
+        @include font-size(16, 21);
+        font-weight: 700;
+        padding-right: 15px;
+        white-space: nowrap;
+    }
+
+    .pending,
+    .approved {
+        display: inline-block;
+        width: 4px;
+        height: 8px;
+        overflow: hidden;
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        transform: translate(6px, -3px) rotate(45deg);
+        color: transparent;
+    }
+
+    .pending {
+        border-color: $color-orange;
+    }
+
+    .approved {
+        border-color: $color-green;
+    }
+
+    .transaction {
+        color: $color-blue;
+    }
+}

@@ -1,0 +1,72 @@
+.ticket-comments {
+    margin-bottom: 24px;
+    
+    .meta {
+        position: relative;
+        color: $color-text-dark;
+        margin-bottom: rem(6);
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            left: -29px;
+            top: 0.35em;
+        }
+    }
+
+    .item {
+        padding: 16px 0 18px;
+        margin-left: 25px;
+        border-bottom: 1px solid $color-gray;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: -25px;
+            top: 25px;
+        }
+
+        &:last-child::before {
+            height: calc(100% - 24px);
+        }
+
+        &.tenant {
+            &::before {
+                background-color: $color-green-light;
+            }
+
+            .meta::before {
+                background-color: $color-green;
+            }
+        }
+
+        &.pmc {
+            &::before {
+                background-color: $color-blue-light;
+            }
+
+            .meta::before {
+                background-color: $color-blue;
+            }
+        }
+
+        &.work-order,
+        &.event {
+            &::before {
+                background-color: $color-orange-light;
+            }
+
+            .meta::before {
+                background-color: $color-orange;
+            }
+        }
+
+    }
+
+}

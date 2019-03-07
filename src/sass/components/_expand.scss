@@ -1,0 +1,8 @@
+.expandable-content:not(.expanded-true) {
+    display: none;
+}
+
+.expand-trigger {
+    text-indent: -999em;
+    overflow: hidden;
+}

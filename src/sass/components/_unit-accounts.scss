@@ -1,0 +1,43 @@
+.unit-accounts {
+    border-top: 1px solid $color-gray;
+    margin-top: 24px;
+
+    .account {
+        border-bottom: 1px solid $color-gray;
+        padding: 18px 0 15px;
+    }
+
+    .address-status {
+        display: flex;
+        margin-bottom: rem(14);
+    }
+
+    .building {
+        @include font-size(16, 21);
+        font-weight: 700;
+        @include ellipsis;
+    }
+
+    .unit {
+        @include font-size(16, 21);
+        font-weight: 700;
+        white-space: nowrap;
+
+        &:before {
+            content: ', ';
+        }
+    }
+
+    .status {
+        margin-left: auto;
+        padding-left: 18px;
+    }
+
+    p {
+        margin-bottom: rem(12);
+    }
+
+    .remove {
+        margin-left: 12px;
+    }
+}

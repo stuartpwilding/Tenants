@@ -1,0 +1,45 @@
+i[class^="icon"] {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 17px;
+    background-size: contain;  
+}
+
+%icon-dimensions {
+    width: 40px;
+    height: 40px;
+}
+
+@mixin icon-offset($shift) {
+    width: 48px;
+    height: 48px;
+    margin-top: -8px;
+    @if $shift == 'shift-left' {
+        transform: translateX(-4px);
+    }
+    @else if $shift == 'shift-right' {
+        transform: translateX(4px);
+    }
+}
+
+.icon-calendar {
+    background-image: url(../img/icon-calendar.svg);
+    @extend %icon-dimensions; 
+}
+
+.icon-ticket {
+    background-image: url(../img/icon-ticket.svg);
+    @extend %icon-dimensions;
+}
+
+.icon-balance {
+    background-image: url(../img/icon-balance.svg);
+    @include icon-offset(shift-left);
+}
+
+.icon-notification {
+    background-image: url(../img/icon-notification.svg);
+    @include icon-offset(shift-right);
+}
+

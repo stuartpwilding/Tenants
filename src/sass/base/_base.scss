@@ -1,0 +1,40 @@
+body { 
+    background-color: $color-gray-bg;
+    @include font-size(14, 21);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(11);
+}
+
+dt,
+dd {
+    &:not(:last-of-type) {
+        margin-bottom: rem(11);
+    }
+}
+
+dt {
+    width: 34%;
+}
+
+dd {
+    width: 66%;
+    padding-left: 10px;
+    color: $color-text-dark;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+

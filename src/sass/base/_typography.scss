@@ -1,0 +1,99 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    color: $color-text;
+}
+
+a {
+    color: $color-blue;
+    text-decoration: none
+}
+
+p {
+    margin-bottom: rem(10);
+}
+
+@mixin text-size-2 {
+    @include font-size(32, 37);
+    color: $color-text-dark;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+}
+
+@mixin text-size-3 {
+    @include font-size(20, 25);
+    color: $color-text-dark;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+@mixin text-size-4 {
+    @include font-size(16, 18);
+    color: $color-text-dark;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    @include text-size-2;
+    text-align: center;
+    margin-bottom: rem(12);
+}
+
+h3 {
+    @include text-size-3;
+    text-align: center;
+    margin-bottom: rem(8);
+}
+
+h4 {
+    @include text-size-4;
+    text-align: center;
+    margin-bottom: rem(25);
+}
+
+.display-2 {
+    @include text-size-2;
+    text-align: center;
+}
+
+.display-3 {
+    @include text-size-3;
+    text-align: center;
+}
+
+.display-4 {
+    @include text-size-4;
+}
+
+.subhead {
+    text-align: center;
+    margin: rem(8) 0 rem(20);
+
+    & + .subhead {
+        margin-top: rem(-7);
+    }
+}
+
+.color-red {
+    color: $color-red !important;
+}
+
+.font-weight-bold {
+   font-weight: 700 !important; 
+}
+
+.status {
+    &.active {
+        color: $color-green;
+    }
+
+    &.pending {
+        color: $color-orange;
+    }
+}
+
+.text-total {
+    @include text-size-4;
+    text-align: center;
+    margin-top: 48px;
+}

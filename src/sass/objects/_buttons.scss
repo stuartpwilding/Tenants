@@ -1,0 +1,73 @@
+@mixin button-base() {
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+    border-radius: 4px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    @include button-base;
+    border: 1px solid $color-gray;
+    min-width: rem(230);
+    max-width: 100%;
+    padding: 7px 8px 8px;
+    color: $color-blue;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+button {
+    &.edit {
+        color: $color-blue;
+    }
+
+    &.remove {
+        color: $color-red;
+    }
+
+    &.wide,
+    &.submit {
+        @include button-base;
+        width: 100%;
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    &.inline {
+        @include button-base;
+        padding: 15px 23px;
+        display: inline;
+    }
+}
+
+button,
+.button {
+    &.submit,
+    &.green {
+        background-color: $color-green;
+        color: #fff;
+    }
+
+    &.orange {
+        background-color: $color-orange;
+        color: #fff;
+    }
+
+    &.blue {
+        background-color: $color-blue;
+        color: #fff;
+    }
+
+    &.pink {
+        background-color: $color-pink;
+        color: #fff;
+    }
+}

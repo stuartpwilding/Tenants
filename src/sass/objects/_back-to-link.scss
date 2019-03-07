@@ -1,0 +1,28 @@
+.back-to-link {
+    text-align: center;
+    
+    a {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 11px;
+            background-image: url(../img/icon-arrow-l-blue.svg);
+            background-size: contain;
+            margin-right: 7px;
+        }
+
+        @include hover {
+            &::before {
+                animation: arrow_bounce 0.7s ease-in-out;
+            }
+        }
+    }
+}
+
+
+@keyframes arrow_bounce {
+    0% {transform: translate(0, 0)}
+    50% {transform: translate(-5px, 0)}
+    100% {transform: translate(0, 0)}
+}

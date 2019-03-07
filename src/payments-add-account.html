@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial:partials/globals/_metatags.html -->
+    <!-- partial --> 
+    <title></title>
+    <!-- partial:partials/globals/_stylesheets.html -->
+    <!-- partial --> 
+    </head>
+<body>
+
+    <!-- partial:partials/globals/_svg.html -->
+    <!-- partial -->
+
+    <!-- partial:partials/globals/_header.html -->
+    <!-- partial -->
+
+    <main id="main">
+
+        <div class="body-bg">
+            <svg class="settings center"><use xlink:href="#bg-03" href="#bg-03"></use></svg>
+        </div>
+
+        <div class="main-content">
+
+            <div class="content-block screen-large-left">
+                <div class="back-to-link"><a href="TEST">Back to payments accounts.</a></div>
+                <h2>Add payment account</h2>
+                <div class="subhead">Add a payment account to process your payments</div>
+                
+                <br>
+
+                <div class="radio-tabs">
+
+                    <div class="field justify first radio-tablist">
+                        <label class="radio">
+                            <input type="radio" name="tabs" data-tab="tabpanel-checking-account" checked>
+                            <span class="checkmark"></span>
+                            <span class="text">Checking account</span>
+                        </label>
+
+                        <label class="radio">
+                            <input type="radio" name="tabs" data-tab="tabpanel-credit-card">
+                            <span class="checkmark"></span>
+                            <span class="text">Credit/debit card <em class="display-checked">Higher fees may apply</em></span>
+                        </label>
+                    </div>
+
+                    <div class="tabpanel expanded-true" id="tabpanel-checking-account">
+
+                        <div class="field">
+                            <label>Account name (optional)</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="fieldx2">
+                            <div class="field">
+                                <label>Type:</label>
+                                <select class="custom">
+                                    <option>Checking</option>
+                                    <option>Mastercard</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Personal/Business:</label>
+                                <select class="custom">
+                                    <option>Personal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>Account number:</label>
+                            <input type="text" value="489962541">
+                        </div>
+
+                        <div class="field">
+                            <label>Confirm account number:</label>
+                            <input type="text" value="489962541">
+                        </div>
+
+                        <div class="field">
+                            <label>Routing number:</label>
+                            <input type="text" value="021000021">
+                        </div>
+
+                        <div class="field">
+                            <label>Bank information:</label>
+                            <input type="text" value="JPMORGAN CHASE BANK" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="tabpanel" id="tabpanel-credit-card">
+
+                        <div class="field">
+                            <label>Account name (optional)</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="field short">
+                            <label>Type:</label>
+                            <select class="custom">
+                                <option>Checking</option>
+                                <option>Mastercard</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Name on card:</label>
+                            <input type="text" value="Betsy Freidman">
+                        </div>
+
+                        <div class="field">
+                            <label>Card number:</label>
+                            <input type="text" value="5899 6254 1085 9963">
+                        </div>
+
+                        <div class="fieldx2">
+                            <div class="field">
+                                <label>Expiration month:</label>
+                                <select class="custom">
+                                    <option>1 - Jan</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Year:</label>
+                                <select class="custom">
+                                    <option>2020</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>CVV:</label>
+                            <input type="text" value="066">
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="field">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                        <span class="text">Make this your default payment account</span>
+                    </label>
+                </div>
+
+                <button class="submit">Save payment account</button>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    <!-- partial:partials/globals/_scripts.html -->
+    <!-- partial -->
+
+</body>
+</html>

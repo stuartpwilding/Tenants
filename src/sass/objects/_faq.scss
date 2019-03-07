@@ -1,0 +1,7 @@
+.faq {
+    margin-top: rem(46);
+
+    li:not(:last-child) {
+        margin-bottom: rem(21);
+    }
+}

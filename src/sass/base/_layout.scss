@@ -1,0 +1,89 @@
+.justify {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    @include container;
+    padding: 137px 0 160px;
+    
+    @include mq($large-up) {
+        @include clearfix;
+        padding-top: 48px;
+    }
+}
+
+
+.content-block {
+    @include container-max-width;
+    position: relative;
+    background: #fff;
+    padding: 36px 64px 52px;
+    margin-bottom: 45px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
+    @include mq($small-only) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    @include mq($large-down) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include mq($large-up) {
+        width: 100%;
+
+        &.screen-large-left {
+            float: left;
+            clear: left;
+        }
+
+        &.screen-large-right {
+            float: right;
+            clear: right;
+        }
+    }
+
+    &.intro {
+        @include mq($large-up) {
+            max-width: none;
+        }
+    }
+
+    .logo-sm {
+        width: 125px;
+        margin: 4px auto 28px;
+    }
+}
+
+.back-to-link {
+    position: absolute;
+    top: -1.8em;
+    left: 0;
+    width: 100%;
+}
+
+figure {
+    @include full-width;
+    margin-bottom: 32px;
+
+    &:first-child {
+        margin-top: -36px;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+h2 + .subhead + .button {
+    margin-top: 33px;
+}
+
+.checkbox + p {
+    margin-top: rem(18);
+}

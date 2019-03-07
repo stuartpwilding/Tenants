@@ -1,0 +1,23 @@
+@mixin container() {
+    width: calc(100vw - 40px);
+    margin: 0 auto;
+
+    @include mq($large-up) {
+        max-width: 894px;
+    }
+}
+
+@mixin container-max-width() {
+    max-width: 422px;
+}
+
+
+@mixin full-width() {
+    margin-right: -64px;
+    margin-left: -64px;
+
+    @include mq($small-only) {
+        margin-right: calc(50% - 50vw + 20px);
+        margin-left: calc(50% - 50vw + 20px);
+    }
+}

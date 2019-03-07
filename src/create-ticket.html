@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial:partials/globals/_metatags.html -->
+    <!-- partial --> 
+    <title></title>
+    <!-- partial:partials/globals/_stylesheets.html -->
+    <!-- partial --> 
+    </head>
+<body>
+
+    <!-- partial:partials/globals/_svg.html -->
+    <!-- partial -->
+
+    <!-- partial:partials/globals/_header.html -->
+    <!-- partial -->
+
+    <main id="main">
+
+        <div class="body-bg">
+            <svg class="maintenance left"><use xlink:href="#bg-01" href="#bg-01"></use></svg>
+        </div>
+
+        <div class="main-content">
+
+            <div class="content-block screen-large-left" id="one">
+                <h2>Create a ticket</h2>
+                <div class="subhead">Select your category and post your maintenance request</div>
+
+                <div class="field first">
+                    <label>Address</label>
+                    <select class="custom">
+                        <option>100 Beford Ave #2-D</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Subject:</label>
+                    <input type="text">
+                </div>
+
+                <div class="field">
+                    <label>Message:</label>
+                    <textarea></textarea>
+
+                    <div class="select-dropdown-group">
+                        <div class="select-dropdown">
+                            <button type="button">Select category</button>
+                            <ul>
+                                <li>
+                                    <label>
+                                        Common area
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Electricity
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Plumbing
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Rent inquiries
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Garbage
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Inspection
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="select-dropdown">
+                            <button type="button">Select priority</button>
+                            <ul>
+                                <li>
+                                    <label>
+                                        Low
+                                        <input type="radio" name="priority">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        Medium
+                                        <input type="radio" name="priority">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        High
+                                        <input type="radio" name="priority">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="submit">Continue</button>
+
+            </div>
+
+
+            <div class="content-block screen-large-left" id="two">
+                <div class="back-to-link"><a href="TEST">Back to Step 1</a></div>
+                <h2>Create a ticket</h2>
+                <div class="subhead color-red ">Before submitting your ticket, do we need to access you apartment?</div>
+                <div class="subhead">Select your category and post your maintenance request</div>
+                
+                <div class="select-tabs">
+                    <div class="field">
+                        <label>When can we access your apartment?</label>
+                        <select class="custom select-tablist">
+                            <option>Anytime</option>
+                            <option data-tab="access-date">Choose date/time</option>
+                            <option data-tab="access-availability">Describe availability</option>
+                        </select>
+                    </div>
+
+                    <div class="tabpanel" id="access-date">
+                        <div class="box">
+                            <div class="field">
+                                <label>Choose date:</label>
+                                <input type="text" class="date">
+                            </div>
+                            <div class="fieldx2">
+                                <div class="field">
+                                    <label>Between:</label>
+                                    <select class="custom">
+                                        <option>10:30am</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>And:</label>
+                                    <select class="custom">
+                                        <option>3:30pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabpanel" id="access-availability">
+                        <div class="box">
+                            <div class="field">
+                                <label>Describe availability:</label>
+                                <textarea placeholder="Type here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Do you have a pet?</label>
+                    <select class="custom">
+                        <option>No</option>
+                        <option>Yes - A small pet</option>
+                        <option>Yes - A large pet</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Access note:</label>
+                    <textarea placeholder="Type here"></textarea>
+                </div>
+
+                <button class="submit">Create ticket</button>
+
+            </div>
+
+            <div class="content-block screen-large-right theme-maintenance">
+                <i class="icon-ticket"></i>
+                <h3>Already submitted a ticket</h3>
+                <div class="subhead">View and track responses</div>
+                <button type="button" class="button">See your ticket</button>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!-- partial:partials/globals/_scripts.html -->
+    <!-- partial -->
+
+    <script>
+        $('#two').hide();
+
+        $('#one .submit').on('click', function() {
+            $('#one').hide();
+            $('#two').show();
+            MGO.initSelect($('#two'));
+        })
+    </script>
+
+</body>
+</html>

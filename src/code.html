@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial:partials/globals/_metatags.html -->
+    <!-- partial --> 
+    <title></title>
+    <!-- partial:partials/globals/_stylesheets.html -->
+    <!-- partial --> 
+
+    <style>
+    .item {
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .code {
+        width: 628px;
+        max-width: none;
+        padding: 0 0 0 20px;
+        
+    }
+    .code pre.prettyprint {
+        border: 0;
+    }
+    .content-block {
+        padding-bottom: 20px;
+    }
+    pre, xmp {
+        margin: 0;
+    }
+    .result {
+       
+    }
+    @media screen and (min-width: 980px) {
+        .result {
+            float: left;
+        }
+        .code {
+            float: right;
+        }
+    }
+    </style>
+
+    </head>
+<body>
+
+    <main id="main">
+
+        <div class="item">
+
+            <div class="content-block result">
+                <h2>Heading</h2>
+                <div class="subhead">Sub-heading</div>
+
+                <div class="field first">
+                    <label>First field, add class 'first', (larger top margin)</label>
+                    <input type="text">
+                </div>
+
+                <div class="field">
+                    <label>Select:</label>
+                    <select class="custom">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<h2>Heading</h2>
+<div class="subhead">Sub-heading</div>
+
+<div class="field first">
+    <label>First field, add class 'first', (larger top margin)</label>
+    <input type="text">
+</div>
+
+<div class="field">
+    <label>Select:</label>
+    <select class="custom">
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="field">
+                    <label>Dollars</label>
+                    <input type="text" class="dollars">
+                </div>
+
+                <div class="field">
+                    <label>Date</label>
+                    <input type="text" class="date">
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field">
+    <label>Dollars</label>
+    <input type="text" class="dollars">
+</div>
+
+<div class="field">
+    <label>Date</label>
+    <input type="text" class="date">
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="fieldx2">
+                    <div class="field">
+                        <label>Label:</label>
+                        <select class="custom">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Label:</label>
+                        <select class="custom">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="fieldx2">
+    <div class="field">
+        <label>Label:</label>
+        <select class="custom">
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>>Label:</label>
+        <select class="custom">
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+    </div>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="field short">
+                    <label>Label:</label>
+                    <select class="custom">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field short">
+    <label>Label:</label>
+    <select class="custom">
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="field">
+                    <label>Label</label>
+                    <div>
+                        <select class="custom inline">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <span class="space-left">some text</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field">
+    <label>Label</label>
+    <div>
+        <select class="custom inline">
+            <option>1</option>
+            <option>2</option>
+        </select>
+        <span class="space-left">some text</span>
+    </div>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+          <div class="item">
+
+            <div class="content-block result">
+                <div class="field inline screen-small-wrap">
+                    <div class="segment">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="text">Wraps</span>
+                        </label>
+                    </div>
+
+                    <div class="segment">
+                        <select class="custom inline" style="width: 105px;">
+                            <option>to 2 lines</option>
+                        </select>
+                        <span class="space-left">on small screens</span>
+                    </div>
+                </div>
+                Note: inline style for custom select width
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field inline screen-small-wrap">
+    <div class="segment">
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span class="text">Wraps</span>
+        </label>
+    </div>
+    <div class="segment">
+        <select class="custom inline" style="width: 105px;">
+            <option>to 2 lines</option>
+        </select>
+        <span class="space-left">on small screens</span>
+    </div>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="field selectx2">
+                    <label>One label with two selects</label>
+                    <select class="custom">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                    <select class="custom">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field selectx2">
+    <label>One label with two selects</label>
+    <select class="custom">
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+    <select class="custom">
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+</div>>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <div class="box">
+                    <div class="field">
+                        <label>Label:</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="box">
+    <div class="field">
+        <label>Label:</label>
+        <input type="text">
+    </div>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                <button class="button">Button</button>
+                <button class="submit">Submit</button>
+                <button class="wide orange">Wide Orange</button>
+                <button class="edit">Edit</button>
+                <button class="remove">Remove</button>
+                <button class="inline blue">Inline Blue</button>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<button class="button">Button</button>
+
+<button class="submit">Submit</button>
+
+<button class="wide orange">Wide Orange</button>
+
+<button class="edit">Edit</button>
+
+<button class="remove">Remove</button>
+
+<button class="inline blue">Inline Blue</button>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                 <div class="field justify">
+                    <label class="radio">
+                        <input type="radio" name="radio-example-01" checked>
+                        <span class="checkmark"></span>
+                        <span class="text">Option 1</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="radio-example-01">
+                        <span class="checkmark"></span>
+                        <span class="text">Option 2 <em>Some highlighted text</em></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field justify">
+    <label class="radio">
+        <input type="radio" name="radio-example-01" checked>
+        <span class="checkmark"></span>
+        <span class="text">Option 1</span>
+    </label>
+
+    <label class="radio">
+        <input type="radio" name="radio-example-01">
+        <span class="checkmark"></span>
+        <span class="text">Option 2 <em>Some highlighted text</em></span>
+    </label>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                 <div class="field">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                        <span class="text">Switch style checkox</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="field">
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+        <span class="text">Switch style checkox</span>
+    </label>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="item">
+
+            <div class="content-block result">
+                 <div class="switch-group-center">
+                    <div class="group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                            <span class="text">Horizontally centered</span>
+                        </label>
+
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span class="text">Switches</span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block code">
+
+<pre class="prettyprint"><xmp>
+<div class="switch-group-center">
+    <div class="group">
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+            <span class="text">Horizontally centered</span>
+        </label>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+            <span class="text">Switches</span>
+        </label>
+    </div>
+</div>
+</xmp></pre>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- partial:partials/globals/_scripts.html -->
+    <!-- partial -->
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+</html>

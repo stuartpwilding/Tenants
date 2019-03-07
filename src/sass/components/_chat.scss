@@ -1,0 +1,26 @@
+.btn-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+.chat {
+    position: fixed;
+    bottom: 20px;
+    right: -520px;
+    z-index: 100;
+    width: 500px;
+    max-width: calc(100vw - 40px);
+    height: 600px;
+    max-height: calc(100vh - 40px);
+    background-color: #fff;
+    border: 1px solid red;
+    transition: right 500ms;
+
+    &.active {
+        right: 20px;
+    }
+}

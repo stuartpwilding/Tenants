@@ -1,0 +1,119 @@
+.select-dropdown {
+    width: 205px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 3px 3px 0 0;
+    border-bottom-width: 0;
+    transform: translateX(-15px);
+    
+    &.expanded-true {
+        border-color: $color-gray;
+        background-color: $color-gray-bg;
+        z-index: 2;
+    }
+
+    button {
+        @include font-size(12, 15);
+        color: $color-blue;
+        margin: 0 14px;
+        padding: rem(13) 0 rem(14);
+        
+        &::before {
+            content: '+';
+            margin-right: 0.25em;
+        }
+    }
+
+    ul {
+        position: absolute;
+        left: -1px;
+        width: calc(100% + 2px);
+        border: 1px solid $color-gray;
+        border-top-width: 0;
+        background-color: $color-gray-bg;
+        color: $color-text-dark;
+        padding: 0 14px;
+        text-align: left;
+        border-radius: 0 0 3px 3px;
+    }
+
+    &.above {
+        border-width: 0 1px 1px;
+        border-radius: 0 0 3px 3px;
+
+        button {
+            padding-top: rem(14);
+            padding-bottom: rem(13);
+        }
+
+        ul {
+            bottom: 100%;
+            border-width: 1px 1px 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        li {
+            border-top: 0;
+            border-bottom: 1px solid $color-gray;
+        }
+    }
+
+    li {
+        position: relative;
+        border-top: 1px solid $color-gray;
+
+        label {
+            display: block;
+            padding: rem(13) 14px rem(13) 0;
+            margin: 0 !important;
+            cursor: pointer;
+        }
+    }
+
+    .checkmark {
+        width: 5px;
+        height: 11px;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-7px) rotate(45deg);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        @include visuallyhidden;
+
+        &:checked ~ .checkmark {
+            border-color: $color-green;
+        }
+
+        &:focus ~ .checkmark {
+            @include focus {
+                border-color: $color-green;
+            }
+        }
+    }
+
+    &:not(.expanded-true) {
+        ul {
+            display: none;
+        }
+    }
+}
+
+.select-dropdown-group {
+    position: relative;
+    height: rem(44);
+
+    .select-dropdown {
+        position: absolute;
+    }
+
+    .select-dropdown:nth-child(even) {
+        right: -15px;
+        transform: translateX(0);
+        text-align: right;
+    }
+}

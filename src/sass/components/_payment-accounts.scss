@@ -1,0 +1,23 @@
+.payment-accounts {
+    border-top: 1px solid $color-gray;
+    margin-top: 24px;
+
+    .account {
+        border-bottom: 1px solid $color-gray;
+        padding: 18px 0 14px;
+    }
+
+    .card {
+        font-size: rem(16);
+        font-weight: 700;
+        margin-bottom: rem(13);
+    }
+
+    .switch {
+        margin-bottom: rem(15);
+    }
+
+    .remove {
+        margin-left: 12px;
+    }
+}

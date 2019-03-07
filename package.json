@@ -1,0 +1,20 @@
+{
+  "name": "appName",
+  "version": "1.0.0",
+  "description": "Simple gulp powered static site generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stuartpwilding/site.git"
+  },
+  "author": "Stuart Wilding",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject-partials": "^1.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-uglify": "^3.0.1"
+  }
+}

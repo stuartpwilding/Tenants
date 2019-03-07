@@ -1,0 +1,111 @@
+.body-bg {
+    position: absolute;
+    top: 99px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 800px;
+    width: 600px;
+    max-width: 90%;
+
+    @include mq($large-up) {
+        top: 186px;
+        width: 1000px;
+    }
+
+    svg {
+        height: 100%;
+        position: absolute;
+
+        &.center {
+            width: 90%;
+
+            @include mq($large-up) {
+                width: 50%;
+            }
+        }
+
+        &.wide {
+            width: 100%;
+        }
+        
+        &.center,
+        &.wide {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        &.left,
+        &.right {
+            width: 49%;
+        }
+
+        &.right {
+            left: 51%;
+        }
+
+        &.payments {
+            fill: $color-blue;
+            stroke: $color-blue;
+        }
+
+        &.maintenance {
+            fill: $color-green;
+            stroke: $color-green;
+        }
+
+        &.settings {
+            fill: $color-orange;
+            stroke: $color-orange;
+        }
+    }
+}
+
+
+
+.theme-payments {
+   &.content-block {
+        background-image: linear-gradient($color-blue, $color-blue 3px, #fff 3px, #fff);
+    }
+
+    .button {
+        border-color: $color-blue-light;
+    }
+}
+
+.theme-maintenance {
+   &.content-block {
+        background-image: linear-gradient($color-green, $color-green 3px, #fff 3px, #fff);
+    }
+
+    .button {
+        color: $color-green;
+        border-color: $color-green-light;
+    }
+
+    &.display-3 {
+        color: $color-green;
+    }
+}
+
+.theme-settings {
+    //orange
+}
+
+.theme-alerts {
+    &.content-block {
+        background-image: linear-gradient($color-red, $color-red 3px, #fff 3px, #fff);
+    }
+
+    .display-2 {
+        color: $color-red;
+    }
+
+    .button {
+        color: $color-red;
+        border-color: $color-red-light;
+    }
+}
+
+h3.theme-alerts {
+    color: $color-red;
+}

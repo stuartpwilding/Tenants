@@ -1,0 +1,236 @@
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: rem(44);
+    border: 1px solid $color-gray;
+    padding-left: 14px;
+    color: $color-text-dark;
+    border-radius: 3px;
+
+    &.dollars {
+        padding-left: calc(14px + 0.75em);
+        background-image: url(../img/icon-dollar.svg);
+        background-size: rem(8);
+        background-position: 14px 50%;
+    }
+
+    &[disabled] {
+        background-color: $color-gray-bg;
+    }
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid $color-gray;
+    color: $color-text-dark;
+    height: rem(194);
+    line-height: inherit;
+    padding: rem(11) 14px;
+    border-radius: 3px;
+
+    .box & {
+        height: rem(133);
+    }
+}
+
+[placeholder] {
+    @include placeholder {
+        color: inherit
+    }
+}
+
+select {
+    min-width: 94px;
+
+    &:not(.inline) {
+        width: 100%;
+    }
+}
+
+label {
+    display: inline-block;
+    @include line-height(14, 17);
+}
+
+.field {
+    margin-bottom: 25px;
+
+    &:not(.inline) label:not(.checkbox):not(.radio) {
+        margin-bottom: rem(6);
+    }
+
+    &.first {
+        margin-top: 33px;
+    }
+
+    &.inline {
+        display: flex;
+        align-items: center;
+
+        &.screen-small-wrap {
+            @include mq($small-only) {
+                display: block;
+            }
+
+            .segment {
+                @include mq($small-up) {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 6px;
+
+                    @include mq($small-up) {
+                        margin: 0 0 0 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.short {
+        width: 125px;
+    }
+
+    &.selectx2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        label {
+            width: 100%;
+        }
+
+        select {
+            width: 125px;
+            max-width: percentage(125/264); //264 = width of .box .selectx2
+        }
+    }
+
+    .space-right {
+        margin-right: 6px;
+    }
+
+    .space-left {
+        margin-left: 6px;
+    }
+}
+
+.box {
+    background-color: $color-gray-bg;
+    padding: 12px 15px 14px;
+    margin-bottom: 20px;
+
+    + .box {
+        margin-top: 45px;
+    }
+
+    .field {
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.fieldx2 {
+    display: flex;
+    justify-content: space-between;
+
+    .field {
+        width: 125px;
+    }
+
+    .box &:last-child .field {
+        margin-bottom: 0;
+    }
+}
+
+.checkbox,
+.radio {
+   display: inline-flex;
+
+    em {
+        display: block;
+        color: $color-red;
+        font-style: normal;
+        @include font-size(12);
+        margin-top: -1.2em;
+        transform: translateY(1.2em);
+
+        &.display-checked {
+            visibility: hidden;
+        }
+    }
+
+    input {
+        @include visuallyhidden;
+
+        &:focus ~ .checkmark {
+            @include focus;
+        }
+
+        &:checked ~ .text .display-checked {
+            visibility: visible;
+        }
+    }
+
+    .field.justify & {
+        max-width: calc(50% - 5px);
+    }
+}
+
+
+.checkbox {
+    .checkmark {
+        width: rem(21);
+        height: rem(21);
+        border: 1px solid $color-gray;
+        margin-right: 11px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .text {
+        padding-top: rem(2);
+    }
+
+    input:checked ~ .checkmark {
+        background-color: $color-gray;
+    }
+}
+
+.radio {
+    color: $color-text-dark;
+
+    .checkmark {
+        width: rem(17);
+        height: rem(17);
+        border-radius: 50%;
+        border: 1px solid $color-gray-v-dark;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: top;
+        flex-shrink: 0;
+        margin-right: 5px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    input {
+        & ~ .checkmark::before {
+            content: '';
+            width: rem(9);
+            height: rem(9);
+            border-radius: 50%;
+        }
+
+        &:checked ~ .checkmark::before {
+            background-color: $color-gray-v-dark;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.auto-payments {
+    border-top: 1px solid $color-gray;
+
+    .expandable-content {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-gray;
+
+        dl {
+            margin-bottom: 20px;
+        }
+    }
+
+    .options {
+        padding-top: 4px;
+
+        p:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+
+        button {
+            margin-bottom: rem(4);
+        }
+    }
+}
+
+.auto-payments-hdr {
+    position: relative;
+    padding: 21px 20px 16px 0;
+    min-height: 80px;
+
+    .amount {
+        @include text-size-4;
+        margin-bottom: rem(4);
+    }
+
+    .expand-trigger {
+        position: absolute;
+        right: -22px;
+        top: 0;
+        width: 55px;
+        height: 55px;
+
+        &::after {
+            content: '';
+            @include chevron(7px, 2px, #999, down);
+            position: absolute;
+            top: 23px;
+            left: 24px;
+        }
+
+        .expanded-true &::after {
+            transform: rotate(45deg);
+            top: 26px;
+        }
+    }
+}
