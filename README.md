@@ -1,4 +1,4 @@
-## ManageGo Tenants Site
+## Tenants Site
 
 ### Brief description
 
